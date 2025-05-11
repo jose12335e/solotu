@@ -1,3 +1,4 @@
+/* Estilos generales */
 body {
     margin: 0;
     padding: 0;
@@ -10,8 +11,9 @@ body {
     align-items: flex-start;
     min-height: 100vh;
     padding: 20px;
-    background-image: url('https://www.transparenttextures.com/patterns/paper.png');
+    background-image: url('https://www.transparenttextures.com/patterns/paper.png ');
     background-size: cover;
+    background-attachment: fixed;
 }
 
 h1 {
@@ -37,41 +39,49 @@ h1 {
     transform: scale(1.1);
 }
 
+/* Media Queries para pantallas pequeñas */
 @media (max-width: 768px) {
     h1 {
-        font-size: 2.5rem; /* Ajusta el tamaño del título para pantallas más pequeñas */
+        font-size: 2.5rem;
     }
 
     .nav a {
-        font-size: 1.2em; /* Ajusta el tamaño de los enlaces para pantallas más pequeñas */
+        font-size: 1.2em;
     }
 
     .book-container {
-        padding: 1rem; /* Reduce el padding para pantallas más pequeñas */
+        padding: 1rem;
     }
 
     button {
-        font-size: 1rem; /* Ajusta el tamaño del botón para pantallas más pequeñas */
-        padding: 0.6rem 1.2rem; /* Ajusta el padding del botón */
+        font-size: 1rem;
+        padding: 0.6rem 1.2rem;
+    }
+
+    #tree-container {
+        min-height: 300px; /* Reducir altura mínima para pantallas pequeñas */
     }
 }
 
+/* Estilo para contenedor del árbol */
 #tree-container {
     position: relative;
     width: 100%;
-    height: 600px;
-    background: url('Mi\ imagen\ de\ ChatGPT.png') no-repeat center center;
-    background-size: contain;
+    min-height: 400px; /* Ajusta según necesites */
+    background: url('../imagenes/mi_imagen_chatgpt.png') no-repeat center center;
+    background-size: cover; /* Asegura que la imagen se adapte */
     overflow: hidden;
+    margin-top: 20px;
 }
 
+/* Animación de corazones */
 .heart {
     position: absolute;
     width: 20px;
     height: 20px;
-    background-color: red;
+    background-color: #ff69b4;
     transform: rotate(-45deg);
-    animation: fall 5s infinite;
+    animation: fall linear infinite;
 }
 
 .heart::before,
@@ -80,8 +90,9 @@ h1 {
     position: absolute;
     width: 20px;
     height: 20px;
-    background-color: red;
+    background-color: #ff69b4;
     border-radius: 50%;
+    z-index: -1;
 }
 
 .heart::before {
@@ -95,7 +106,42 @@ h1 {
 }
 
 @keyframes fall {
-    0% { top: -50px; opacity: 0; }
-    50% { opacity: 1; }
-    100% { top: 400px; opacity: 0; }
+    0% { 
+        top: -50px; 
+        opacity: 0; 
+    }
+    50% { 
+        opacity: 1; 
+    }
+    100% { 
+        top: 100vh; 
+        opacity: 0; 
+    }
+}
+
+/* Estilo para capítulos */
+.book-container {
+    max-width: 800px;
+    width: 100%;
+    background-color: rgba(255, 255, 255, 0.95);
+    padding: 2rem;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    margin-top: 20px;
+}
+
+button {
+    background-color: #8b4513;
+    color: white;
+    border: none;
+    padding: 0.8rem 1.5rem;
+    font-size: 1rem;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+button:hover {
+    background-color: #a9552a;
+    transform: scale(1.05);
 }

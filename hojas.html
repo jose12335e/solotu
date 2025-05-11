@@ -1,12 +1,14 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Te elijo, siempre</title>
-  <link rel="stylesheet" href="st_hojas.css">
+  <link rel="stylesheet" href="st_hojas.css" />
 </head>
 <body>
+
+  <!-- Pantalla de Autenticación -->
   <div id="auth-container" class="book-container">
     <h2>Ingrese su PIN</h2>
     <input type="password" id="pin-input" placeholder="PIN" />
@@ -14,15 +16,23 @@
     <p id="error-message" style="color: red; display: none;">PIN incorrecto. Inténtelo de nuevo.</p>
   </div>
 
+  <!-- Contenido liberado tras PIN correcto -->
   <div id="content-container" class="book-container" style="display: none;">
-    <!-- Contenido protegido -->
-    <div id="tree-container"></div>
-    <div class="nav">
-      <button onclick="window.location.href='capitulos.html'">Siguiente</button>
-    </div>
+    <!-- Imagen de la pareja -->
+    <img src="Mi imagen de ChatGPT.png" alt="Imagen de la pareja" class="pareja-image">
+
+    <h2>¡Acceso concedido!</h2>
+    <p>Estás listo para comenzar tu viaje emocional. Haz clic en el botón para ir al índice.</p>
+    <button onclick="goToChapter('capitulos.html')">SIGUIENTE</button>
   </div>
 
+  <!-- Contenedor para los corazones dinámicos -->
+  <div id="tree-container"></div>
+
+  <!-- Scripts -->
   <script src="auth.js"></script>
-  <script src="tree.js"></script> <!-- Asegúrate de enlazar el archivo JavaScript -->
+  <script src="cg_hojas.js"></script>
+  <script src="tree.js"></script>
+
 </body>
 </html>

@@ -3,8 +3,12 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Capítulo V</title>
-  <link href="https://fonts.googleapis.com/css2?family=Georgia&family=Playfair+Display&display=swap" rel="stylesheet" />
+  <title>Capítulo V – Lo que no se dice</title>
+
+  <!-- Fuentes -->
+  <link href="https://fonts.googleapis.com/css2?family=Georgia&family=Playfair+Display&display=swap " rel="stylesheet">
+
+  <!-- Estilos -->
   <link rel="stylesheet" href="st_hojas.css" />
 </head>
 <body>
@@ -43,11 +47,12 @@
     <p>Así que aquí estoy, sin tener todas las respuestas, pero con una certeza: lo que sea que pase, seguiré aquí. No sé por cuánto tiempo, no sé qué vendrá después, pero lo que sé es que no te voy a olvidar.<br/>
     Ni lo que vivimos, ni lo que aún podría ser.</p>
 
-    <button onclick="prevpage5()">ANTERIOR</button>
-    <button onclick="nextpage5()" >SIGUIENTE</button>
-
+    <!-- Botones actualizados para usar goToChapter() -->
+    <button onclick="goToChapter('capitulo4.html')">ANTERIOR</button>
+    <button onclick="goToChapter('capitulo6.html')">SIGUIENTE</button>
   </div>
-  <script src="cg_hojas.js"></script>
 
+  <!-- Script principal -->
+  <script src="cg_hojas.js"></script>
 </body>
 </html>
