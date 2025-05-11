@@ -60,7 +60,7 @@ h1 {
     position: relative;
     width: 100%;
     height: 600px;
-    background: url('/Mi\ imagen\ de\ ChatGPT.png') no-repeat center center;
+    background: url('Mi\ imagen\ de\ ChatGPT.png') no-repeat center center;
     background-size: contain;
     overflow: hidden;
 }
